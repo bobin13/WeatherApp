@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Weather App</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="style/style.css">
+   <script type="text/javascript" src="js/en.js" charset="utf-8"></script>
+   <script src="js/script.js" charset="utf-8"></script>
+</head>
+<body>
+   <header>
+      <h2 id="pageHeading">Weather App ⛅</h2>
+   </header>
+   <div id="main">
+      
+      <video playsinline autoplay loop muted id="backgroundVideo">
+         <source id="videoSource" src="" type="video/mp4">
+         
+      </video>
+      
+      <div class="text-overlay">
+         
+         <div id="searchPane">
+            <input type="text" id="searchBox" value="london canada"></input><br>
+            <button id="searchBtn">Find!</button>
+         </div>
+         
+         <div id="weatherInfoContainer">
+            <h3 id="formattedAddress"></h3>
+            <div id="weatherPanel">
+               
+               <div id="column-1" class="column">
+                  <div id="row-1">
+                     <div>
+                        <img id="weatherIcon" src=""></img>
+                        <p id="summary"></p>
+                     </div>
+                     <div>
+                        <p id="weatherTemp"></p>
+                        <p id="feelsLike"></p>
+                     </div>
+                  </div>
+                  <div id="row-2">
+                     <p id="description"></p>
+                     <p id="minMax"></p>
+                     <p id="weatherWind"></p>
+                     <p id="pressure"></p>
+                     <p></p>
+                  </div>
+                  
+                  
+               </div>
+               <div id="column-2" class="column">
+                  <div class="dailyWeatherItem" id="column-2-1"></div>
+                  <div class="dailyWeatherItem" id="column-2-2"></div>
+                  <div class="dailyWeatherItem" id="column-2-3"></div>
+                  <div class="dailyWeatherItem" id="column-2-4"></div>
+                  <div class="dailyWeatherItem" id="column-2-5"></div>
+                  <div class="dailyWeatherItem" id="column-2-6"></div>
+                  
+               </div>
+               
+            </div>
+            
+            <div id="cityInfo">
+            </div>
+            
+         </div>
+         
+      </div>
+      
+   </div>
+ 
+</body>
+</html>
