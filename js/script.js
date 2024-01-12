@@ -70,18 +70,16 @@ function search(searchQuery) {
 //takes a search query for input
 function getLonLat(searchQuery) {
   fetch(
-    "https://maps.googleapis.com/maps/api/geocode/json?address=" +
-    searchQuery +
-    "&key=AIzaSyDp39DSoy3Xw-_pnDkUHAhB4MDufDMwIXY"
+    "https://geocode.maps.co/search?q=" + searchQuery + "&api_key=65a17477ec8ee528018075bvua1a7bb"
   )
     .then((response) => response.json())
     .then(function (data) {
-      console.log(data.results[0].geometry.location);
-      console.log(data.results[0].formatted_address);
-      $("#formattedAddress").html(data.results[0].formatted_address);
+
+      console.log(data[0]);
+      $("#formattedAddress").html(data[0].display_name);
       getWeather(
-        data.results[0].geometry.location.lng,
-        data.results[0].geometry.location.lat
+        data[0].lon,
+        data[0].lat
       );
     });
 }
