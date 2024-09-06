@@ -74,6 +74,7 @@ header{
 .weather-icon{
 	width: 80px;
 }
+
 #formattedAddress{
 	padding: 0;
 	margin: 10px;
@@ -188,9 +189,13 @@ footer{
 }
 @media only screen and (min-device-width: 600px) {
 	body{
-		width: 60%;
-		text-align: center;
 		
+		
+		
+	}
+	.main{
+		width: 60%;
+		margin: auto;
 	}
 	#weatherPanel{
 		/* display: flex; */
