@@ -35,7 +35,9 @@ video {
 	
 
 }
-
+.search-panel{
+	text-align: center;
+}
 #searchBox{
 
 	height:40px;
