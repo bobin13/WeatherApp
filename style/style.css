@@ -9,7 +9,7 @@ body {
 	font-size: 1.2rem;
 	font-weight: bold;
 	font-family: 'Courier New', monospace;
-	margin: 0px;
+	margin: 5px;
 	padding: 0px;
 }
 
@@ -62,14 +62,18 @@ video {
 
 }
 header{
-	position: sticky;
-	height: 3rem;
+	display: flex;
+	justify-content: center;
 	background:#495E57;
 	color: #fff;
 	width: 100%;
+	border-radius: 10px;
+	font-size: 1.3em;
 	
 }
-
+.weather-icon{
+	width: 80px;
+}
 #formattedAddress{
 	padding: 0;
 	margin: 10px;
@@ -184,7 +188,9 @@ footer{
 }
 @media only screen and (min-device-width: 600px) {
 	body{
-		/* width: 50%; */
+		width: 60%;
+		text-align: center;
+		
 	}
 	#weatherPanel{
 		/* display: flex; */
