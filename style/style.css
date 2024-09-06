@@ -1,19 +1,16 @@
 :root {
-	--opacityShadow: ;
+	
 	--white: #ffffff;
   }
 body {
-	margin: 0;
-	padding: 0;
-	background-color: #454545;
+	
+	background-color: #45474B;
 	color: #ffffff;
 	font-size: 1.2rem;
 	font-weight: bold;
-	text-align: center;
-	width: 95%;
-	margin: auto;
 	font-family: 'Courier New', monospace;
-	
+	margin: 0px;
+	padding: 0px;
 }
 
 video {
@@ -63,13 +60,12 @@ video {
 
 }
 header{
-	width: 100%;
-	top: 0;
-	left: 0;
-	background-color: rgba(0,0,0,0.8);
+	position: sticky;
+	height: 3rem;
+	background:#495E57;
 	color: #fff;
-	padding: 1px;
-	border-radius:10px;
+	width: 100%;
+	
 }
 
 #formattedAddress{
@@ -186,10 +182,10 @@ footer{
 }
 @media only screen and (min-device-width: 600px) {
 	body{
-		width: 70%;
+		/* width: 50%; */
 	}
 	#weatherPanel{
-		display: flex;
+		/* display: flex; */
 		
 	}
 	#column-2{

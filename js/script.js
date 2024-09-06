@@ -171,7 +171,7 @@ function updateUI(data) {
   );
   $("#pressure").html("Pressure:<br>" + data.main.pressure / 10 + " Kpa");
   $("#searchBox").val("");
-  changeSource("images/" + data.weather[0].main + ".mp4");
+  //changeSource("images/" + data.weather[0].main + ".mp4");
   console.log(data.weather[0].description);
 }
 
