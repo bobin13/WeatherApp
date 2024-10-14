@@ -134,8 +134,10 @@ a{
 	overflow: auto;
 	white-space: nowrap;
 	font-size: .7em;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.8);
 	border-radius: 15px;
+	margin-top: 10px;
+	padding: 5px;
 }
 
 .dailyWeatherItem{
@@ -195,7 +197,43 @@ footer{
 		
 	}
 	.main{
-		width: 60%;
+		width: 80%;
+		margin: auto;
+	}
+	#weatherPanel{
+		/* display: flex; */
+		
+	}
+	#column-2{
+		
+	}
+}
+@media only screen and (min-device-width: 950px) {
+	body{
+		
+		
+		
+	}
+	.main{
+		width: 50%;
+		margin: auto;
+	}
+	#weatherPanel{
+		/* display: flex; */
+		
+	}
+	#column-2{
+		
+	}
+}
+@media only screen and (min-device-width: 1400px) {
+	body{
+		
+		
+		
+	}
+	.main{
+		width: 40%;
 		margin: auto;
 	}
 	#weatherPanel{
