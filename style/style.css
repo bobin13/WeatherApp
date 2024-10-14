@@ -141,6 +141,7 @@ a{
 .dailyWeatherItem{
 	flex:1;
 	display: flex;
+	text-align: center;
 	flex-direction: column;
 	min-width: 80px;
 	
