@@ -1,5 +1,14 @@
 //const {data} = require('pb.js');
+let geocode_api = "";
+let openweather_api = "";
 $(document).ready(function () {
+  fetch('../var.json')
+    .then((response) => response.json())
+    .then((json) => {
+      geocode_api = json.GEOCODE_API;
+      openweather_api = json.OPEN_WEATHER_API;
+    });
+ 
   //changeLanguage("pb");
   $("#searchBtn").click(function () {
     var searchQuery = $("#searchBox").val();
@@ -70,7 +79,7 @@ function search(searchQuery) {
 //takes a search query for input
 function getLonLat(searchQuery) {
   fetch(
-    "https://geocode.maps.co/search?q=" + searchQuery + "&api_key=65a17477ec8ee528018075bvua1a7bb"
+    "https://geocode.maps.co/search?q=" + searchQuery + "&api_key="+geocode_api
   )
     .then((response) => response.json())
     .then(function (data) {
@@ -92,7 +101,7 @@ function getWeeklyWeather(lon, lat, cnt) {
     lon +
     "&cnt=" +
     cnt +
-    "&appid=0c82162ee40c8f6679c9357f60b2be27"
+    "&appid="+openweather_api
   )
     .then((response) => response.json())
     .then(function (data) {
