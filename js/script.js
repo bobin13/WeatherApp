@@ -1,14 +1,14 @@
 //const {data} = require('pb.js');
 let geocode_api = "";
 let openweather_api = "";
-$(document).ready(function () {
-  fetch('var.json')
+$(document).ready(async function () {
+  await fetch('var.json')
     .then((response) => response.json())
     .then((json) => {
       geocode_api = json.GEOCODE_API;
       openweather_api = json.OPEN_WEATHER_API;
     });
- 
+    
   //changeLanguage("pb");
   $("#searchBtn").click(function () {
     var searchQuery = $("#searchBox").val();
