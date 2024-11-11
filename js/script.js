@@ -119,7 +119,7 @@ function getWeather(lon, lat) {
     lat +
     "&lon=" +
     lon +
-    "&units=metric&appid=0c82162ee40c8f6679c9357f60b2be27"
+    "&units=metric&appid="+openweather_api
   )
     .then((response) => response.json())
     .then(function (data) {
