@@ -2,7 +2,7 @@
 let geocode_api = "";
 let openweather_api = "";
 $(document).ready(function () {
-  fetch('../var.json')
+  fetch('var.json')
     .then((response) => response.json())
     .then((json) => {
       geocode_api = json.GEOCODE_API;
