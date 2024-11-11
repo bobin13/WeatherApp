@@ -71,7 +71,7 @@ function changeLanguage(language) {
 }
 
 function search(searchQuery) {
-  console.log(searchQuery);
+  
   getLonLat(searchQuery);
 }
 
@@ -105,7 +105,7 @@ function getWeeklyWeather(lon, lat, cnt) {
   )
     .then((response) => response.json())
     .then(function (data) {
-      console.log(data);
+      
       updateWeeklyUI(data, cnt);
     });
 }
@@ -113,7 +113,7 @@ function getWeeklyWeather(lon, lat, cnt) {
 //takes latitude and longitude as parameters
 //return weather data from openweather API
 function getWeather(lon, lat) {
-  console.log(lon + " " + lat);
+  
   fetch(
     "https://api.openweathermap.org/data/2.5/weather?lat=" +
     lat +
@@ -161,7 +161,7 @@ function changeSource(url) {
 }
 
 function updateUI(data) {
-  console.log(Math.round(data.main.temp) + "°C");
+  
   $("#weatherTemp").html(Math.round(data.main.temp) + "°C");
   $("#weatherWind").html(
     "Wind:<br>" + Math.round(data.wind.speed * 3.6) + " Km/hr"
@@ -181,7 +181,7 @@ function updateUI(data) {
   $("#pressure").html("Pressure:<br>" + data.main.pressure / 10 + " Kpa");
   $("#searchBox").val("");
   //changeSource("images/" + data.weather[0].main + ".mp4");
-  console.log(data.weather[0].description);
+  
 }
 
 //returns url for right weather icon
